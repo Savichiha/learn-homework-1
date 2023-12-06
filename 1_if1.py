@@ -13,13 +13,25 @@
 * Вывести содержимое переменной на экран
 
 """
-
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+age = input('Введите ваш возраст: ')
+age = int()
+
+def kuda (age):
+    if age > 7:
+        return "Деткий сад"
+    elif age >=8 and age < 17:
+        return "Школа"
+    elif age >=18 and age < 22:
+        return "ВУЗ"
+    else:
+        return "Иди работай"
+
+print(kuda(age))
 
 if __name__ == "__main__":
     main()

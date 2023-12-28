@@ -14,24 +14,27 @@
     Программа: Программирую
     
 """
-
 questions_and_answers = {}
 
 def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    questions_and_answers = {'Как дела?': 'Хорошо!', 'Что делаешь?': 'Читаю', 'Что читаешь?': 'Виктор Пелевин'}
+questions_and_answers = {'Как дела?': 'Хорошо!',
+     'Что делаешь?': 'Читаю',
+     'Что читаешь?': 'Виктор Пелевин'}
 
-while True:
-    ask_user = input('Введите ваш вопрос: ')
-    if ask_user == questions_and_answers:
-        print(questions_and_answers)
-        break
-    else:
-      print(ask_user)  
-print('Пока!')
+def ask_user(answers_dict):
+    while True:
+        question = input('Введите ваш вопрос: ')
+        print(question)
+        if question in answers_dict:
+            print(answers_dict.get(question))
+            break
+        else:
+            print('Я не знаю ответ на этот вопрос')
 
+if __name__ == "__main__":
+    ask_user(questions_and_answers)
+
+    pass
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)

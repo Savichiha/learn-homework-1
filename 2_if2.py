@@ -20,7 +20,22 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+a = input('Введите первую строку: ')
+b = input('Введите вторую строку: ')
+
+def proverka (a, b):
+    if not isinstance(a, str) or not isinstance(b, str):
+        return "0"
+    if len(a) == len(b):
+        return "1"
+    if len(a) > len(b):
+        return "2"
+    if len(a) != len(b) and b == u'learn':
+        return "3"
+    else:
+        return "4"
+  
+print(proverka (a, b))
     
 if __name__ == "__main__":
     main()
